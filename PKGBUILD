@@ -74,7 +74,6 @@ package_2s2h() {
   pkgdesc="An unofficial port of The Legend of Zelda Majora's Mask"
   depends=("${_depends_2s2h[@]}" "${_depends_lus[@]}")
   license=("CC0-1.0")
-  install=2s2h.install
 
   cd "${srcdir}/${_reponame}-${pkgver}"
 
