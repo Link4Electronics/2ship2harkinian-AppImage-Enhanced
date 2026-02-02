@@ -6,7 +6,10 @@ ARCH=$(uname -m)
 
 echo "Installing package dependencies..."
 echo "---------------------------------------------------------------"
-pacman -Syu --noconfirm tinyxml2
+pacman -Syu --noconfirm \
+    tinyxml2           \
+    ttf-fipps          \
+    ttf-press-start-2p
 
 echo "Installing debloated packages..."
 echo "---------------------------------------------------------------"
