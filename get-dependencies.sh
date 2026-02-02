@@ -7,15 +7,15 @@ ARCH=$(uname -m)
 echo "Installing package dependencies..."
 echo "---------------------------------------------------------------"
 pacman -Syu --noconfirm \
-    tinyxml2           \
-    ttf-fipps          \
-    ttf-press-start-2p
+    tinyxml2
 
 echo "Installing debloated packages..."
 echo "---------------------------------------------------------------"
 get-debloated-pkgs --add-common --prefer-nano
 
 # Comment this out if you need an AUR package
+make-aur-package ttf-fipps
+make-aur-package ttf-press-start-2p
 make-aur-package
 
 # If the application needs to be manually built that has to be done down here
