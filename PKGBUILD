@@ -37,17 +37,6 @@ _main_submodules=(
 
 SHIP_PREFIX=/opt/2s2h
 
-_is_debug() {
-  for opt in "${OPTIONS[@]}"; do
-    if [ "$opt" = debug ]; then
-      return 0
-    fi
-  done
-
-  return 1
-}
-
-
 prepare() {
   cd "${srcdir}/${_reponame}-${pkgver}"
 
@@ -61,11 +50,7 @@ prepare() {
 build() {
   cd "${srcdir}/${_reponame}-${pkgver}"
 
-  if _is_debug; then
-    BUILD_TYPE=Debug
-  else
-    BUILD_TYPE=Release
-  fi
+  BUILD_TYPE=Release
 
   export CFLAGS="${CFLAGS/-Werror=format-security/}"
   export CXXFLAGS="${CXXFLAGS/-Werror=format-security/}"
@@ -90,7 +75,6 @@ package_2s2h() {
   pkgdesc="An unofficial port of The Legend of Zelda Majora's Mask"
   depends=("${_depends_2s2h[@]}" "${_depends_lus[@]}")
   license=("CC0-1.0")
-  install=2s2h.install
 
   cd "${srcdir}/${_reponame}-${pkgver}"
 
