@@ -7,9 +7,8 @@ ARCH=$(uname -m)
 echo "Installing package dependencies..."
 echo "---------------------------------------------------------------"
 pacman -Syu --noconfirm \
-    libdecor        \
-    tinyxml2        \
-    xorg-font-utils
+    libdecor \
+    tinyxml2
 
 echo "Installing debloated packages..."
 echo "---------------------------------------------------------------"
@@ -17,6 +16,7 @@ get-debloated-pkgs --add-common --prefer-nano
 
 # Comment this out if you need an AUR package
 make-aur-package zenity-rs-bin
+make-aur-package xorg-font-utils
 make-aur-package ttf-press-start-2p
 make-aur-package
 
