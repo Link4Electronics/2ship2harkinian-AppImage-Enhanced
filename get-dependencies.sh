@@ -7,6 +7,7 @@ ARCH=$(uname -m)
 echo "Installing package dependencies..."
 echo "---------------------------------------------------------------"
 pacman -Syu --noconfirm \
+    libdecor \
     tinyxml2
 
 echo "Installing debloated packages..."
@@ -17,5 +18,6 @@ get-debloated-pkgs --add-common --prefer-nano
 make-aur-package
 make-aur-package ttf-fipps
 make-aur-package ttf-press-start-2p
+make-aur-package zenity-rs-bin
 
 # If the application needs to be manually built that has to be done down here
