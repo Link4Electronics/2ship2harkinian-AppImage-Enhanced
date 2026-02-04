@@ -1,15 +1,15 @@
 # Maintainer: AltoXorg <atrl101 AT yahoo DOT com>
 
 _reponame=2ship2harkinian
-_lus_commit=a8bdcab363571038bb71f195f21ec3e9033a220d
+_lus_commit=b2dd85ca393225afb0c949035e0eabf87751ff89
 _ZAPDTR_commit=684f21a475dcfeee89938ae1f4afc42768a3e7ef
 _OTRExporter_commit=32e088e28c8cdd055d4bb8f3f219d33ad37963f3
 
 pkgbase=2s2h
 pkgname=(2s2h 2s2h-otr-exporter)
-pkgver=3.0.2
+pkgver=4.0.0
 pkgrel=1
-arch=("x86_64" "aarch64")
+arch=("x86_64" "i686" "armv7h" "aarch64")
 #url="https://shipofharkinian.com/"
 url="https://github.com/HarbourMasters/${_reponame}"
 _depends_2s2h=("sdl2" "zenity" "libpng" "libogg" "libvorbis" "opus" "opusfile")
@@ -22,11 +22,11 @@ source=("${_reponame}-${pkgver}.tar.gz::https://github.com/HarbourMasters/${_rep
         "OTRExporter-${_OTRExporter_commit:0:8}.tar.gz::https://github.com/louist103/OTRExporter/archive/${_OTRExporter_commit}.tar.gz"
         "ZAPDTR-${_ZAPDTR_commit:0:8}.tar.gz::https://github.com/louist103/ZAPDTR/archive/${_ZAPDTR_commit}.tar.gz"
         "2s2h.desktop")
-sha256sums=('cfb2892e36596b70bc7ce7353c3363983462a2406fae0f471de7ca32a205c63b'
-            '7361e5283faf39747e5eab010a4ae37dbc544bbd9e04d034179fca475f71cbe0'
+sha256sums=('1d9d8662073628857c84efe9b40f13367470ee071809c9da4b830697f1bb010d'
+            '6215214daabd17245ba657138e85b7c46b80b8d84a469c1fe15fdd4aa93f9706'
             '91a863f8899f2ebfc7868ccad4b5982ae416799c76358ce5b2c0edc11e42a672'
             '8016f735f9ef4e177384b0e51f243e374bf2f67ba66bdd5d21af8b185aed1635'
-            '2aa91f147e41a0137cebc3330ee692b28c1292380c6bedb0adad69247cf47198')
+            '8c8525a09a94c30106f44219c0f0239789d5c53cd6e30c7748b55f8d83cee24b')
 
 # -- Per-repo submodules
 _main_submodules=(
@@ -36,6 +36,17 @@ _main_submodules=(
 )
 
 SHIP_PREFIX=/opt/2s2h
+
+_is_debug() {
+  for opt in "${OPTIONS[@]}"; do
+    if [ "$opt" = debug ]; then
+      return 0
+    fi
+  done
+
+  return 1
+}
+
 
 prepare() {
   cd "${srcdir}/${_reponame}-${pkgver}"
@@ -50,7 +61,12 @@ prepare() {
 build() {
   cd "${srcdir}/${_reponame}-${pkgver}"
 
-  BUILD_TYPE=Release
+  if _is_debug; then
+    BUILD_TYPE=Debug
+  else
+    BUILD_TYPE=Release
+  fi
+
   export CFLAGS="${CFLAGS/-Werror=format-security/}"
   export CXXFLAGS="${CXXFLAGS/-Werror=format-security/}"
 
@@ -74,6 +90,7 @@ package_2s2h() {
   pkgdesc="An unofficial port of The Legend of Zelda Majora's Mask"
   depends=("${_depends_2s2h[@]}" "${_depends_lus[@]}")
   license=("CC0-1.0")
+  install=2s2h.install
 
   cd "${srcdir}/${_reponame}-${pkgver}"
 
@@ -97,6 +114,8 @@ package_2s2h-otr-exporter() {
   depends=("${_depends_2s2h_otr_exporter[@]}" "${_depends_lus[@]}")
 
   cd "${srcdir}/${_reponame}-${pkgver}"
+
   DESTDIR="${pkgdir}" cmake --install build --component extractor
+
   install -Dm644 "OTRExporter/LICENSE" "${pkgdir}/usr/share/licenses/2s2h-otr-exporter/LICENSE"
 }
