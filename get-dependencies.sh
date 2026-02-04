@@ -15,9 +15,7 @@ echo "---------------------------------------------------------------"
 get-debloated-pkgs --add-common --prefer-nano
 
 # Comment this out if you need an AUR package
-make-aur-package
-make-aur-package ttf-fipps
-make-aur-package ttf-press-start-2p
 make-aur-package zenity-rs-bin
+make-aur-package
 
 # If the application needs to be manually built that has to be done down here
