@@ -7,8 +7,9 @@ ARCH=$(uname -m)
 echo "Installing package dependencies..."
 echo "---------------------------------------------------------------"
 pacman -Syu --noconfirm \
-    libdecor \
-    tinyxml2
+    libdecor        \
+    tinyxml2        \
+    xorg-font-utils
 
 echo "Installing debloated packages..."
 echo "---------------------------------------------------------------"
