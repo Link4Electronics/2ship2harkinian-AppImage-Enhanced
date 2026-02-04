@@ -13,7 +13,7 @@ export DESKTOP=/usr/share/applications/2s2h.desktop
 export DEPLOY_OPENGL=1
 
 # Deploy dependencies
-quick-sharun /usr/bin/2s2h /usr/bin/2s2h-otr-exporter
+quick-sharun /usr/bin/2s2h /usr/bin/2s2h-otr-exporter /usr/bin/zenity
 mv /opt/2s2h/2ship.o2r ./AppDir/bin
 mv /opt/2s2h/gamecontrollerdb.txt ./AppDir/bin
 echo 'SHARUN_WORKING_DIR=${SHARUN_DIR}/bin' >> ./AppDir/.env
