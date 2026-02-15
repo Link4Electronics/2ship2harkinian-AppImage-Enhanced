@@ -1,10 +1,10 @@
 <div align="center">
 
-# 2s2h-AppImage 🐧
+# 2ship2harkinian-AppImage-Enhanced 🐧
 
-[![GitHub Downloads](https://img.shields.io/github/downloads/pkgforge-dev/2s2h-AppImage/total?logo=github&label=GitHub%20Downloads)](https://github.com/pkgforge-dev/2s2h-AppImage/releases/latest)
-[![CI Build Status](https://github.com//pkgforge-dev/2s2h-AppImage/actions/workflows/appimage.yml/badge.svg)](https://github.com/pkgforge-dev/2s2h-AppImage/releases/latest)
-[![Latest Stable Release](https://img.shields.io/github/v/release/pkgforge-dev/2s2h-AppImage)](https://github.com/pkgforge-dev/2s2h-AppImage/releases/latest)
+[![GitHub Downloads](https://img.shields.io/github/downloads/pkgforge-dev/2ship2harkinian-AppImage-Enhanced/total?logo=github&label=GitHub%20Downloads)](https://github.com/pkgforge-dev/2ship2harkinian-AppImage-Enhanced/releases/latest)
+[![CI Build Status](https://github.com//pkgforge-dev/2ship2harkinian-AppImage-Enhanced/actions/workflows/appimage.yml/badge.svg)](https://github.com/pkgforge-dev/2ship2harkinian-AppImage-Enhanced/releases/latest)
+[![Latest Stable Release](https://img.shields.io/github/v/release/pkgforge-dev/2ship2harkinian-AppImage-Enhanced)](https://github.com/pkgforge-dev/2ship2harkinian-AppImage-Enhanced/releases/latest)
 
 <p align="center">
   <img src="https://github.com/HarbourMasters/2ship2harkinian/blob/develop/mm/linux/2s2hIcon.png" width="128" />
@@ -13,7 +13,7 @@
 
 | Latest Stable Release | Upstream URL |
 | :---: | :---: |
-| [Click here](https://github.com/pkgforge-dev/2s2h-AppImage/releases/latest) | [Click here](https://github.com/HarbourMasters/2ship2harkinian) |
+| [Click here](https://github.com/pkgforge-dev/2ship2harkinian-AppImage-Enhanced/releases/latest) | [Click here](https://github.com/HarbourMasters/2ship2harkinian) |
 
 </div>
 
