@@ -42,7 +42,7 @@ cmake . \
     -GNinja \
     -DNON_PORTABLE=On
 cmake --build build --config Release
-cmake --build build --config Release --target GenerateO2R
+cmake --build build --config Release --target Generate2ShipOtr
 
 mv -v build/assets ../AppDir/bin
 mv -v build/2s2h.elf ../AppDir/bin
