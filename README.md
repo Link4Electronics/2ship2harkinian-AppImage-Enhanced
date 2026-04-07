@@ -17,7 +17,7 @@
 
 </div>
 
-### ⚠️ Need to generate `mm.o2r` using official [AppImage](https://github.com/HarbourMasters/2ship2harkinian/releases/latest) and place in ~/.local/share/2ship/ ⚠️
+### ⚠️ Need to generate `mm.o2r` using official [AppImage](https://github.com/HarbourMasters/2ship2harkinian/releases/latest) and place in `~/.local/share/2ship/` ⚠️
 
 ---
 
