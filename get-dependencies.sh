@@ -11,6 +11,7 @@ pacman -Syu --noconfirm \
     fmt           \
     libdecor      \
     libzip        \
+    lsb-release   \
     ninja         \
     nlohmann-json \
     sdl2          \
