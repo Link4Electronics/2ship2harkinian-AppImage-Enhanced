@@ -14,6 +14,7 @@ pacman -Syu --noconfirm \
     lsb-release   \
     ninja         \
     nlohmann-json \
+    opusfile      \
     sdl2          \
     sdl2_net      \
     spdlog        \
