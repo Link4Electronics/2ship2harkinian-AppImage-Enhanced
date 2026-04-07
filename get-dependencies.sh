@@ -39,7 +39,7 @@ VERSION="$(git ls-remote --tags --sort="v:refname" "$REPO" | tail -n1 | sed 's/.
 git clone --branch "$VERSION" --single-branch --recursive --depth 1 "$REPO" ./2ship2harkinian
 echo "$VERSION" > ~/version
 
-mkdir -p ./AppDir/bin
+mkdir -p ./AppDir/bin/lib
 cd ./2ship2harkinian
 cmake . \
     -Bbuild \
@@ -51,6 +51,7 @@ cmake --build build --config Release --target Generate2ShipOtr
 mv -v build/mm/assets ../AppDir/bin
 mv -v build/mm/2s2h.elf ../AppDir/bin
 mv -v build/mm/2ship.o2r ../AppDir/bin
+mv -v build/_deps/stormlib-build/libstorm.a ../AppDir/bin/lib
 wget -O ../AppDir/bin/gamecontrollerdb.txt https://raw.githubusercontent.com/mdqinc/SDL_GameControllerDB/master/gamecontrollerdb.txt
 cp -v build/2s2hIcon.png ../AppDir/.DirIcon
 mv -v build/2s2hIcon.png ../AppDir/2s2h.png
