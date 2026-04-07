@@ -46,7 +46,7 @@ cmake --build build --config Release
 cmake --build build --config Release --target Generate2ShipOtr
 
 mv -v build/assets ../AppDir/bin
-mv -v build/2s2h.elf ../AppDir/bin
+mv -v build/mm/2s2h.elf ../AppDir/bin
 mv -v build/2ship.o2r ../AppDir/bin
 wget -O ../AppDir/bin/gamecontrollerdb.txt https://raw.githubusercontent.com/mdqinc/SDL_GameControllerDB/master/gamecontrollerdb.txt
-cp -rv icon.png /usr/share/pixmaps/2s2h.png
+cp -rv build/2s2hIcon.png /usr/share/pixmaps/2s2h.png
