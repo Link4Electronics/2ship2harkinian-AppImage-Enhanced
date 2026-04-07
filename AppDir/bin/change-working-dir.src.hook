@@ -1,3 +1,12 @@
-dir=${XDG_CONFIG_HOME:-~/.local}/share/2ship
+#!/bin/false
+
+dir=${XDG_DATA_HOME:-~/.local/share}/2ship
 mkdir -p "$dir"
 cd "$dir"
+
+for f in 2ship.o2r assets gamecontrollerdb.txt; do
+	f="$APPDIR"/bin/"$f" 
+	if [ -e "$f" ]; then
+		cp -af "$f" ./
+	fi
+done
