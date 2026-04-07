@@ -49,5 +49,5 @@ mv -v build/mm/assets ../AppDir/bin
 mv -v build/mm/2s2h.elf ../AppDir/bin
 mv -v build/mm/2ship.o2r ../AppDir/bin
 wget -O ../AppDir/bin/gamecontrollerdb.txt https://raw.githubusercontent.com/mdqinc/SDL_GameControllerDB/master/gamecontrollerdb.txt
-cp -v build/2s2hIcon.png ./AppDir/.DirIcon
-mv -v build/2s2hIcon.png ./AppDir/2s2h.png
+cp -v build/2s2hIcon.png ../AppDir/.DirIcon
+mv -v build/2s2hIcon.png ../AppDir/2s2h.png
