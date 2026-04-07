@@ -35,7 +35,6 @@ echo "$VERSION" > ~/version
 
 mkdir -p ./AppDir/bin
 cd ./2ship2harkinian
-patch -Np1 -i ../spaghettikart-cmake-flags.patch
 cmake . \
     -Bbuild \
     -GNinja \
@@ -43,10 +42,8 @@ cmake . \
 cmake --build build --config Release
 cmake --build build --config Release --target GenerateO2R
 
-mv -v build/yamls ../AppDir/bin
-mv -v build/meta ../AppDir/bin
-mv -v build/Spaghettify ../AppDir/bin
-mv -v build/config.yml ../AppDir/bin
-mv -v build/spaghetti.o2r ../AppDir/bin
+mv -v build/assets ../AppDir/bin
+mv -v build/2s2h.elf ../AppDir/bin
+mv -v build/2ship.o2r ../AppDir/bin
 wget -O ../AppDir/bin/gamecontrollerdb.txt https://raw.githubusercontent.com/mdqinc/SDL_GameControllerDB/master/gamecontrollerdb.txt
-cp -rv icon.png /usr/share/pixmaps/spaghettikart.png
+cp -rv icon.png /usr/share/pixmaps/2s2h.png
