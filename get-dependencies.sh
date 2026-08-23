@@ -43,8 +43,7 @@ mkdir -p ./AppDir/bin/lib
 cd ./2ship2harkinian
 cmake . \
     -Bbuild \
-    -GNinja \
-    -DNON_PORTABLE=On
+    -GNinja
 cmake --build build --config Release
 cmake --build build --config Release --target Generate2ShipOtr
 
