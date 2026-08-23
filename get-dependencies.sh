@@ -20,18 +20,13 @@ pacman -Syu --noconfirm \
     sdl2_net      \
     spdlog        \
     tinyxml2
-    #ttf-inconsolata
 
 echo "Installing debloated packages..."
 echo "---------------------------------------------------------------"
 get-debloated-pkgs --add-common --prefer-nano
 
-# Comment this out if you need an AUR package
 make-aur-package zenity-rs-bin
-#make-aur-package xorg-font-utils
-#make-aur-package ttf-press-start-2p
 
-# If the application needs to be manually built that has to be done down here
 echo "Making stable build of 2ship2harkinian..."
 echo "---------------------------------------------------------------"
 REPO="https://github.com/HarbourMasters/2ship2harkinian"
