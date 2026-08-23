@@ -9,7 +9,6 @@ echo "---------------------------------------------------------------"
 pacman -Syu --noconfirm \
     cmake         \
     fmt           \
-    libdecor      \
     libzip        \
     lsb-release   \
     ninja         \
@@ -23,7 +22,7 @@ pacman -Syu --noconfirm \
 
 echo "Installing debloated packages..."
 echo "---------------------------------------------------------------"
-get-debloated-pkgs --add-common --prefer-nano
+get-debloated-pkgs --add-common --prefer-nano libdecor-mini
 
 make-aur-package zenity-rs-bin
 
