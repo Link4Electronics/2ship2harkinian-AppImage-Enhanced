@@ -1,12 +1,3 @@
-#!/bin/false
-
-dir=${XDG_DATA_HOME:-~/.local/share}/2ship
-mkdir -p "$dir"
-cd "$dir"
-
-for f in 2ship.o2r assets gamecontrollerdb.txt; do
-	f="$APPDIR"/bin/"$f" 
-	if [ -e "$f" ]; then
-		cp -af "$f" ./
-	fi
-done
+#!/bin/sh
+export SHIP_HOME="${SHIP_HOME:-$DATADIR/2ship}"
+mkdir -p "$SHIP_HOME"
