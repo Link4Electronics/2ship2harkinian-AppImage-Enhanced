@@ -42,10 +42,6 @@ git clone --branch "$VERSION" --single-branch --recursive --depth 1 "$REPO" ./2s
 )
 
 mkdir -p ./AppDir/bin
-mv -v ./2s2h/build/mm/assets    ./AppDir/bin
-mv -v ./2s2h/build/mm/2s2h.elf  ./AppDir/bin
-mv -v ./2s2h/build/mm/2ship.o2r ./AppDir/bin
-mv -v ./2s2h/build/2s2hIcon.png ./AppDir/2s2h.png
-
+mv -v ./2s2h/build/mm/assets ./2s2h/build/mm/2s2h.elf ./2s2h/build/mm/2ship.o2r ./AppDir/bin
 wget -O ./AppDir/bin/gamecontrollerdb.txt https://raw.githubusercontent.com/mdqinc/SDL_GameControllerDB/master/gamecontrollerdb.txt
 
