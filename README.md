@@ -7,7 +7,7 @@
 [![Latest Stable Release](https://img.shields.io/github/v/release/pkgforge-dev/2ship2harkinian-AppImage-Enhanced)](https://github.com/pkgforge-dev/2ship2harkinian-AppImage-Enhanced/releases/latest)
 
 <p align="center">
-  <img src="https://github.com/HarbourMasters/2ship2harkinian/blob/develop/mm/linux/2s2hIcon.png" width="128" />
+  <img src="https://raw.githubusercontent.com/HarbourMasters/2ship2harkinian/refs/heads/develop/mm/linux/2s2hIcon.png" width="128" />
 </p>
 
 
