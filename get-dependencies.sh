@@ -35,8 +35,8 @@ git clone --branch "$VERSION" --single-branch --recursive --depth 1 "$REPO" ./2s
 	cd ./2s2h
 
 	cmake ./ -Bbuild -GNinja
-	cmake --build build --config Release
-	cmake --build build --config Release --target Generate2ShipOtr
+	cmake --build build --config Release -j$(nproc)
+	cmake --build build --config Release --target Generate2ShipOtr -j$(nproc)
 
 	echo "$VERSION" > ~/version
 )
