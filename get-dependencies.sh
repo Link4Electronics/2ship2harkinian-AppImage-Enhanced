@@ -11,7 +11,6 @@ pacman -Syu --noconfirm \
 	fmt           \
 	libzip        \
 	lsb-release   \
-	ninja         \
 	nlohmann-json \
 	opusfile      \
 	python        \
@@ -34,7 +33,7 @@ VERSION=$(git ls-remote --tags --refs --sort=-v:refname "$REPO" | awk -F'/' '{pr
 git clone --branch "$VERSION" --single-branch --recursive --depth 1 "$REPO" ./2s2h && (
 	cd ./2s2h
 
-	cmake ./ -Bbuild -GNinja -DCMAKE_BUILD_TYPE=Release
+	cmake ./ -Bbuild -DCMAKE_BUILD_TYPE=Release
 	cmake --build build --config Release -j$(nproc)
 	cmake --build build --config Release --target Generate2ShipOtr -j$(nproc)
 
